@@ -57,7 +57,7 @@
         <aside class="main-sidebar sidebar-dark-primary elevation-4 navbar-gray-dark">
             <a class="brand-link">
                 <i class="fas fa-person-dress"></i>
-                <span class="brand-text font-weight-light">Clothing shop</span>
+                <span class="brand-text font-weight-light ml-4">e-Odeća</span>
             </a>
             <!-- Sidebar -->
             <div class="sidebar">
@@ -73,7 +73,7 @@
                         }
                         else
                         {
-                            <a href="#" class="d-block">Uloguj se</a>
+                            <button class="btn btn-primary col-12">Prijavi se</button>
                         }
                     </div>
                 </div>
@@ -150,13 +150,15 @@
                         <li class="nav-item">
                             <hr />
                         </li>
-                        <li class="nav-item">
-                            <a href="@Url.Action("Logout", "Account")" class="nav-link">
-                                <i class="nav-icon far fa-circle text-danger"></i>
-                                <p class="text">Log out</p>
-                            </a>
-                        </li>
-
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a href="@Url.Action("Logout", "Account")" class="nav-link">
+                                    <i class="nav-icon far fa-circle text-danger"></i>
+                                    <p class="text">Log out</p>
+                                </a>
+                            </li>
+                        }
                     </ul>
                 </nav>
             </div>

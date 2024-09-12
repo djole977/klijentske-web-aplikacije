@@ -11,9 +11,5 @@ namespace KWA_Djole.Data
             : base(options)
         {
         }
-        public DbSet<CustomerReview> CustomerReviews { get; set; }
-        public DbSet<ShoppingItem> ShoppingItems { get; set; }
-        public DbSet<Order> Orders { get; set; }
-        public DbSet<OrderItem> OrderItems { get; set; }
     }
 }

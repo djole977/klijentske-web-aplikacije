@@ -14,10 +14,6 @@ namespace KWA_Djole.Business.Infrastructure.Automapper
         public MappingProfiles()
         {
             CreateMap<BaseModel, BaseDto>().ReverseMap();
-            CreateMap<Order, OrderDto>().ReverseMap();
-            CreateMap<OrderItem, OrderItemDto>().ReverseMap();
-            CreateMap<CustomerReview, CustomerReviewDto>().ReverseMap();
-            CreateMap<ShoppingItem, ShoppingItemDto>().ReverseMap();
         }
     }
 }
